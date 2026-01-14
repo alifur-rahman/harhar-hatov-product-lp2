@@ -1,0 +1,18 @@
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .main-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-section {
+        padding: 50px 0;
+    }
+    
+    .quote-text {
+        font-size: 1.4rem;
+    }
+}
