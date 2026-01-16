@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 91" width="91" height="91">
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: #610200;stroke: #d1925c;stroke-miterlimit:100 } 
+		.s1 { fill: #d1925c } 
+	</style>
+	<g id="Contact Form">
+		<g id="Group 13">
+			<g id="Group 8">
+				<path id="Ellipse 1" fill-rule="evenodd" class="s0" d="m45.12 89.88c24.64 0 44.57-19.93 44.57-44.57 0-24.65-19.93-44.57-44.57-44.57-24.65 0-44.57 19.92-44.57 44.57 0 24.64 19.92 44.57 44.57 44.57z"/>
+				<path id="arrow_outward" fill-rule="evenodd" class="s1" d="m37.61 39.43v15.14h-3.52v-21.13h21.14v3.52h-15.15l16.91 16.91-2.47 2.46z"/>
+			</g>
+		</g>
+	</g>
+</svg>
