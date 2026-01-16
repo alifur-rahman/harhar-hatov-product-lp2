@@ -1,4 +1,191 @@
 /* Responsive adjustments */
+@media (max-width: 991px) {
+    .banner_area {
+        margin-top: 0;
+    }
+    
+    .banner_content_area {
+        padding-bottom: 250px;
+        margin-bottom: 31px;
+    }
+    .banner_content {
+        max-width: 100%;
+    }
+    .banner_content h1 {
+        font-size: 66px;
+        line-height: 66px;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .banner_content h3 {
+        font-size: 45px;
+        line-height: 40px;
+    }
+    .banner_content p {
+        font-size: 18px;
+        width: 100%;
+        max-width: 45%;
+    }
+    .meat_section_signature {
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .meat_section_signature img {
+        width: 100%;
+    }
+    .section-padding {
+        padding: 30px 0;
+    }
+    .section_content_image_grid {
+        margin: 25px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .section_content_image_grid.reverse_grid {
+        flex-direction: column-reverse;
+    }
+   
+    .grid_head_image,
+    .grid_head_image img,
+    .item_image img,
+    .item_image {
+        width: 100%;
+    }
+    .grid_head_title p {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    h1 {
+        font-size: 38px;
+        line-height: 36px;
+    }
+    /* .order-first-atmb{
+        order: -1 !important;
+    } */
+   
+    .shapre_bg,
+    .knife_shape {
+        display: none;
+    }
+    .hide_destop{
+        display: block !important;
+    } 
+    .info_identifiker {
+        bottom: 34.5%;
+        left: 12%;
+    }
+    .form_icon {
+        max-width: 50px;
+    }
+    .contact_main_content {
+        padding: 20px 35px;
+        border: 1px solid var(--primary-color);
+        border-radius: 10px;
+    }
+    .contact_info_details {
+        text-align: right;
+    }
+    .contact_icon_item {
+        justify-content: flex-start;
+    }
+}
 @media (max-width: 768px) {
+    .banner_content_area {
+        padding-bottom: 200px;
+        margin-bottom: 31px;
+    }
+    .nav_area li a {
+        font-size: 16px;
+    }
+    .nav_icon {
+        width: 100%;
+        max-width: 35px;
+        margin-left: 3px;
+    }
+    .nav_contuct_btns {
+        padding: 5px 10px;
+    }
+    .banner_content h1 {
+        font-size: 55px;
+        line-height: 55px;
+    }
+    .banner_content h3 {
+        font-size: 38px;
+        line-height: 38px;
+    }   
+    .banner_content p {
+        font-size: 16px;
+    }
+    .banner_content_area {
+        padding-bottom: 160px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .section_titile p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .section_devider_image {
+        width: 100%;
+        max-width: 130px;
+    }
+    h6 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .meat_content p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    h4 {
+        font-size: 32px;
+        line-height: 35px;
+    }
+    .item_details p {
+        font-size: 18px;
+        color: var(--primary-color);
+        line-height: 20px;
+    }
+    .item_details span {
+        font-size: 18px;
+    }
+    .contact_form_area h2 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .contact_form_area p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .input_item input {
+        font-size: 15px;
+    }
+    .input_item label {
+        font-size: 12px;
+    }
+    .contact_info_details h5 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .contact_info_details span {
+        font-size: 17px;
+    }
+    .contact_icon_item span {
+        font-size: 16px;
+    }
+    .contact_icon_item img {
+        width: 100%;
+        max-width: 22px;
+    }
+    .contact_icon_item {
+        gap: 3px;
+    }
+}
+@media (max-width: 480px) {
    
 }
