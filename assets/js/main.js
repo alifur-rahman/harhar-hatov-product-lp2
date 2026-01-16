@@ -45,10 +45,10 @@
             return;
         }
         
-        // Handle form submission via AJAX (no page reload)
+        // Handle form submission via AJAX
         if (submitBtn) {
             submitBtn.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default button behavior
+                e.preventDefault();
                 
                 // Get form values
                 const fullName = document.getElementById('full_name').value;
@@ -68,17 +68,45 @@
                     return;
                 }
                 
+                // Disable submit button to prevent multiple submissions
+                submitBtn.disabled = true;
+                // submitBtn.textContent = 'Sending...';
                 
-                // Reset form
-                contactForm.reset();
+                // Prepare form data
+                const formData = new FormData();
+                formData.append('full_name', fullName);
+                formData.append('email', email);
+                formData.append('phone', phone);
+                formData.append('marketing', marketing);
                 
-                // Optional: Show success message on page (instead of alert)
-                showMessage(`Message sent successfully`, 'success');
+                // Send AJAX request to PHP
+                fetch('contact_form.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Reset form
+                        contactForm.reset();
+                        showMessage(data.message, 'success');
+                    } else {
+                        showMessage(data.message, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showMessage('An error occurred. Please try again.', 'error');
+                })
+                .finally(() => {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    // submitBtn.textContent = 'Submit';
+                });
             });
         }
         
-        // Optional: Function to show success message on page
-         
+        // Function to show messages
         function showMessage(text, type) {
             // Remove existing messages
             const existingMsg = document.querySelector('.form-message');
@@ -105,12 +133,16 @@
             // Add to page
             const msgSIdentifier = document.querySelector('.contact_fromarea');
             
-            msgSIdentifier.parentNode.insertBefore(messageDiv, msgSIdentifier.nextSibling);
+            if (msgSIdentifier) {
+                msgSIdentifier.parentNode.insertBefore(messageDiv, msgSIdentifier.nextSibling);
+            } else {
+                // Fallback if element not found
+                contactForm.appendChild(messageDiv);
+            }
             
             // Auto-remove after 5 seconds
             setTimeout(() => {
                 messageDiv.remove();
             }, 5000);
         }
-
     });
